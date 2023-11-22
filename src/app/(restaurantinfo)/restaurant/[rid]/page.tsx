@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import getRestaurant from '@/libs/getRestaurant'
 import Link from 'next/link'
+import { Suspense } from 'react'
+import { LinearProgress } from '@mui/material'
 
 export default async function RestaurantDetailPage({ params }: { params: { rid: string } }) {
 
     const restaurantDetail = await getRestaurant(params.rid)
     return (
         <main className='text-center p-5 font-sans'>
+            <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
             <h1 className='text-lg font-medium'>{restaurantDetail.data.name}</h1>
             <div className='flex flex-row my-5 font-normal text-xl'>
                 <Image src={restaurantDetail.data.picture}
@@ -27,10 +30,8 @@ export default async function RestaurantDetailPage({ params }: { params: { rid: 
                     </Link>
                 </div>
             </div>
+            </Suspense>
         </main>
     )
 }
 
-export async function generalStaticParams() {
-    return [{ rid: '001' }, { rid: '002' }, { rid: '003' }]
-}

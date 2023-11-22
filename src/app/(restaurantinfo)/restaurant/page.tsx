@@ -13,7 +13,7 @@ export default async function Hospital() {
   const session = await getServerSession(authOptions);
 	//const profile = session ? await getUserProfile(session.user.token) : null;
   return (
-    <main className="text-center p-5">
+    <main className="text-center p-5 mt-20">
       <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
       <h1 className="text-xl font-medium">Select restaurant</h1>
         <RestaurantCatalog restaurantJson={restaurants}/>
