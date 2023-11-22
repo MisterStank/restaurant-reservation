@@ -28,17 +28,6 @@ function Reserve() {
               focus:outline-none focus:ring-sky-800 focus:placeholder:text-sky-800"
           />
         </div>
-        <div className="w-[100%] flex flex-row">
-          <div className="text-md text-left text-gray-600">National ID No.</div>
-          <input
-            type="text"
-            id="NationalIDNo"
-            placeholder="National ID No"
-            className="ml-5 mr-5 rounded ring-1 ring-inset ring-gray-600
-              text-md leading-6 indent-2 placeholder:text-gray-400
-              focus:outline-none focus:ring-sky-800 focus:placeholder:text-sky-800"
-          />
-        </div>
         <div className="text-md text-left text-gray-600">
           Choose Date and Location
         </div>
