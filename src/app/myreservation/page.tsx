@@ -1,9 +1,12 @@
-import React from 'react'
+"use client"
+import ReservationCart from "@/components/ReservationCart"
 
-function page() {
+function MyReservation() {
   return (
-    <div>page</div>
+    <main className="mt-20 w-[100%]">
+      <ReservationCart></ReservationCart>
+    </main>
   )
 }
 
-export default page
+export default MyReservation

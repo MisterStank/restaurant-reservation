@@ -27,8 +27,9 @@ async function Menu() {
                   Sign-in
                 </div>
               </Link>              
-            }
-            <MenuItem title='new reservation' pageRef='/reserve' />
+            } 
+            <MenuItem title='my reservations' pageRef='/myreservation' />
+            <MenuItem title='new reservation' pageRef='/restaurant' />
         </div>
     </div>
   )
