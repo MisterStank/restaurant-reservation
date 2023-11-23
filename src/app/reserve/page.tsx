@@ -7,6 +7,7 @@ import { useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { addReservation } from "@/redux/features/cartSlice";
 import { ReservationItem } from "../../../interfaces";
+import Link from "next/link";
 
 function Reserve() {
   const urlParams = useSearchParams()
@@ -64,13 +65,14 @@ function Reserve() {
           Choose Reservation Date
         </div>
         <LocationDateReserve onDateChange={(value:Dayjs)=>{setReserveDate(value)}} />
-      </div>
+      </div><Link href="/myreservation">
       <button
         className="block rounded-md bg-primary hover:bg-accent px-3 py-2
         shadow-sm text-white " onClick={makeReservation}
       >
         submit
       </button>
+      </Link>
     </main>
   );
 }
