@@ -22,11 +22,17 @@ async function Menu() {
                 </div>
               </Link>
               :
+              <div className='flex flex-row-reverse'>
               <Link href="/api/auth/signin">
                 <div className='flex w-120 h-full items-center justify-center text-center mx-5  text-secondary'>
                   Sign-in
                 </div>
-              </Link>              
+              </Link>
+              <Link href="/register">
+              <div className='flex w-120 h-full items-center justify-center text-center mx-5  text-secondary'>
+                Register
+              </div>
+            </Link></div>                   
             } 
             <MenuItem title='my reservations' pageRef='/myreservation' />
             <MenuItem title='new reservation' pageRef='/restaurant' />
